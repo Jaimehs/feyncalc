@@ -24,7 +24,7 @@ FreeQ2[x_, {y_, z__}] := If[FreeQ[x, y], FreeQ2[x, {z}], False];
 FreeQ2[x_, {y_, z__}] := FreeQ[x, Alternatives@@{y,z}];
 *)
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "FreeQ2 | \n "]];
 Null

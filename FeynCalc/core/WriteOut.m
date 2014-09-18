@@ -18,7 +18,7 @@ is the first argument of OneLoop.";
 Begin["`Private`"];
    
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "WriteOut | \n "]];
 Null

@@ -78,7 +78,7 @@ Explicit[y_, opts___?OptionQ] := Block[{dim, gh, gp, gvv, gv, qp, qgv, t2g, fis,
            If[r =!= y, r = ChangeDimension[r, dim]];
 r];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Explicit | \n "]];
 Null

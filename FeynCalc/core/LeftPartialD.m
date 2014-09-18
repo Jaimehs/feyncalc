@@ -34,16 +34,16 @@ Commutator[RightPartialD[a_], LeftPartialD[b_]] = 0;
 
  LeftPartialD /:
    MakeBoxes[LeftPartialD[x_ ^n_],TraditionalForm] :=
-    SubsuperscriptBox[RowBox[{
-      OverscriptBox["\[PartialD]", "\[LeftArrow]"]}], Tbox[" ",x],
-        Tbox[n]
+    SubSuperscriptBox[RowBox[{
+      OverscripFeynCalc`Tbox["\[PartialD]", "\[LeftArrow]"]}], FeynCalc`Tbox[" ",x],
+        FeynCalc`Tbox[n]
                      ] /; Head[x] === Momentum;
 
    LeftPartialD /:
    MakeBoxes[LeftPartialD[x_], TraditionalForm] :=
-   SubscriptBox[OverscriptBox["\[PartialD]", "\[LeftArrow]"], TBox[x]];
+   SubscripFeynCalc`Tbox[OverscripFeynCalc`Tbox["\[PartialD]", "\[LeftArrow]"], FeynCalc`Tbox[x]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "LeftPartialD | \n "]];
 Null

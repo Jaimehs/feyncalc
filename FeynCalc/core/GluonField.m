@@ -16,7 +16,7 @@ Begin["`Private`"];
 
    GluonField /: MakeBoxes[GluonField, TraditionalForm] := "A";
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "GluonField | \n "]];
 Null

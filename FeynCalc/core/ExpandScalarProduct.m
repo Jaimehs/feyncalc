@@ -89,7 +89,7 @@ sczwei[ _[_],_[_,_Symbol-4] ]:=0;             (*sczweidef*)
 sczwei[ v_[x_,di_Symbol-4],w_[y_,di_Symbol] ]:= sczwei[v[x,di-4],w[y,di-4]];
 sczwei[ w_[y_,di_Symbol],v_[x_] ]:=sczwei[ v[x],w[y] ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "ExpandScalarProduct | \n "]];
 Null

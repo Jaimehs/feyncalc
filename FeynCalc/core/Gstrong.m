@@ -16,9 +16,9 @@ Begin["`Private`"];
 
   Gstrong /:
    MakeBoxes[Gstrong, TraditionalForm] :=
-    SubscriptBox["g","s"]
+    SubscripFeynCalc`Tbox["g","s"]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Gstrong | \n "]];
 Null

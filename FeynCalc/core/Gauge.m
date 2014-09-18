@@ -15,7 +15,7 @@ Gauge::"usage" =
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Gauge | \n "]];
 Null

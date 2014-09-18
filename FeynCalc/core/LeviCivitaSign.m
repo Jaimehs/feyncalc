@@ -14,7 +14,7 @@ the sign in the result of a Dirac trace of four gamma matrices and gamma5.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "LeviCivitaSign | \n "]];
 Null

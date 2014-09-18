@@ -35,10 +35,10 @@ MetricTensor[a_, b_, opt___Rule] :=
    If[$LorentzIndices===True,
       ReleaseHold[
       Hold[MakeBoxes][fci[MetricTensor[x, y, opts]], TraditionalForm]],
-      SuperscriptBox["g", Tbox[x,y]]
+      SuperscriptBox["g", FeynCalc`Tbox[x,y]]
      ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "MetricTensor | \n "]];
 Null

@@ -29,14 +29,14 @@ FourVector[a_,b_, c___Rule] :=
 
    FourVector /:
    MakeBoxes[FourVector[a_Plus,b_, ___], TraditionalForm] :=
-    SubscriptBox[Tbox["(",HoldForm[a],
-                      ")"],Tbox[b]];
+    SubscripFeynCalc`Tbox[FeynCalc`Tbox["(",HoldForm[a],
+                      ")"],FeynCalc`Tbox[b]];
    FourVector /:
    MakeBoxes[FourVector[a_,b_, ___], TraditionalForm] :=
-    SubscriptBox[Tbox[a],Tbox[b]] /; Head[a] =!= Plus;
+    SubscripFeynCalc`Tbox[FeynCalc`Tbox[a],FeynCalc`Tbox[b]] /; Head[a] =!= Plus;
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 
 
 

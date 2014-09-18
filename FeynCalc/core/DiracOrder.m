@@ -71,7 +71,7 @@ diracord[x_,ord_List]     := memset[diracord[x,ord], Block[
       ];
       (Expand[dotLin[diracordres], diracgamma])/.pair->sCO/.sCO->pair]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracOrder | \n "]];
 Null

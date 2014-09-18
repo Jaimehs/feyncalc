@@ -13,7 +13,7 @@ Possible use: DataType[mu, FreeIndex] = True.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "FreeIndex | \n "]];
 Null

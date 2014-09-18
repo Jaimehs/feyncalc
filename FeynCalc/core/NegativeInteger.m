@@ -14,7 +14,7 @@ E.g. DataType[n, NegativeInteger] can be set to True.";
 
 Begin["`Private`"]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "NegativeInteger | \n "]];
 Null

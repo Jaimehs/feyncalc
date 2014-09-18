@@ -25,7 +25,7 @@ SUNIndex[i_Integer]:= ExplicitSUNIndex[i];
    MakeBoxes[ SUNIndex[p_], TraditionalForm
             ] := ToBoxes[p, TraditionalForm];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SUNIndex | \n "]];
 Null

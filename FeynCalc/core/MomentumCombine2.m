@@ -45,7 +45,7 @@ plm[xX__] := If[Length[{xX}] > 10, Plus[xX],
              FreeQ2[{n3, n4}, {Pair, Momentum, LorentzIndex}]
      )
                                     }];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "MomentumCombine2 | \n "]];
 Null

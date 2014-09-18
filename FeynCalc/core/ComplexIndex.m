@@ -18,9 +18,9 @@ ComplexIndex[ComplexIndex[x_]] := x;
 
    ComplexIndex /:
    MakeBoxes[ComplexIndex[x_] ,TraditionalForm] :=
-   SuperscriptBox[Tbox[x], "*"];
+   SuperscriptBox[FeynCalc`Tbox[x], "*"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "ComplexIndex | \n "]];
 Null

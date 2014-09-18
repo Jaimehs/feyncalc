@@ -22,7 +22,7 @@ SmallEpsilon /: SmallEpsilon^_Integer?Positive = 0;
 SmallEpsilon /:
 MakeBoxes[SmallEpsilon, TraditionalForm] := "\[Epsilon]";
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SmallEpsilon | \n "]];
 Null

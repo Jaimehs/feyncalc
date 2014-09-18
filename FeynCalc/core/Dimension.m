@@ -15,7 +15,7 @@ The setting should always be 4, a symbol (D, n, ...), or \
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Dimension | \n "]];
 Null

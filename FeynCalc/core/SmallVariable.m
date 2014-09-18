@@ -23,7 +23,7 @@ SmallVariable[x_^pow_] := SmallVariable[x]^pow;
    MakeBoxes[SmallVariable[a_], TraditionalForm] :=
     MakeBoxes[a, TraditionalForm];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SmallVariable | \n "]];
 Null

@@ -18,7 +18,7 @@ MakeContext[DiracGamma];
 
 GA5 = DiracGamma[5];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "GA5 | \n "]];
 Null

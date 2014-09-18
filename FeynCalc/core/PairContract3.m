@@ -39,7 +39,7 @@ If[FreeQ[{x,y},LorentzIndex],
    ExpandScalarProduct[x,y],
    PairContract3[x,y]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PairContract3 | \n "]];
 Null

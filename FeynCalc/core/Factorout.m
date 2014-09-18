@@ -12,7 +12,7 @@ Factorout::"usage" = "Factorout is an option for OPEInt and OPEIntegrate.";
 (* ------------------------------------------------------------------------ *)
 
 Begin["`Private`"];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Factorout | \n "]];
 Null

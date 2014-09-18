@@ -17,7 +17,7 @@ integrals. Possible settings include Integrate, NIntegrate,
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "FCIntegrate | \n "]];
 Null

@@ -47,12 +47,12 @@ Spinor[p_, m_ /; FreeQ[m, Pattern]] := Spinor[p, m, 1] /; frp[p];
 
    Spinor /:
     MakeBoxes[Spinor[p_,0,___], TraditionalForm] :=
-     Tbox["\[CurlyPhi]","(",p,")"];
+     FeynCalc`Tbox["\[CurlyPhi]","(",p,")"];
    Spinor /:
     MakeBoxes[Spinor[p_,m_ /; m=!=0,___], TraditionalForm] :=
-     Tbox["\[CurlyPhi]","(",p, ",", m, ")"];
+     FeynCalc`Tbox["\[CurlyPhi]","(",p, ",", m, ")"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Spinor | \n "]];
 Null

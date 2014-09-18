@@ -16,7 +16,7 @@ Begin["`Private`"];
 
    QuarkField /: MakeBoxes[QuarkField, TraditionalForm] := "\[Psi]";
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "QuarkField | \n "]];
 Null

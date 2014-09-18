@@ -23,8 +23,8 @@ CommutatorExplicit[exp_] := exp /.
     AntiCommutator :> ((DOT[#1, #2] + DOT[#2, #1])&)
    };
 
-End[]; EndPackage[];
+End[];
 
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
 If[$VeryVerbose > 0,WriteString["stdout", "CommutatorExplicit | \n "]];
 Null

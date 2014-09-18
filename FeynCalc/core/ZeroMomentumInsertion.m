@@ -14,7 +14,7 @@ Twist2QuarkOperator.";
 Begin["`Private`"];
    
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "ZeroMomentumInsertion | \n "]];
 Null

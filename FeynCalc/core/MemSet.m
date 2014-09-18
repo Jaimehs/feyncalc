@@ -34,7 +34,7 @@ If[((MemoryAvailable/.{ops} /. Options[MemSet]) -
     Set[x, y]
   ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "MemSet | \n "]];
 Null

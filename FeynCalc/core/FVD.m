@@ -14,15 +14,15 @@ by FeynCalcInternal.";
 Begin["`Private`"];
 
    FVD /: MakeBoxes[FVD[a_Subscripted, b_], TraditionalForm] :=
-             SubsuperscriptBox[Tbox[a[[1,0]]], Tbox@@a[[1]], Tbox[b]];
+             SubSuperscriptBox[FeynCalc`Tbox[a[[1,0]]], FeynCalc`Tbox@@a[[1]], FeynCalc`Tbox[b]];
 
    FVD /: MakeBoxes[FVD[a_Subscript, b_], TraditionalForm] :=
-             SubsuperscriptBox[Tbox[a[[1]]], Tbox@@Rest[a], Tbox[b]];
+             SubSuperscriptBox[FeynCalc`Tbox[a[[1]]], FeynCalc`Tbox@@Rest[a], FeynCalc`Tbox[b]];
 
    FVD /: MakeBoxes[FVD[a_, b_], TraditionalForm] :=
-            SuperscriptBox[Tbox[a], Tbox[b]];
+            SuperscriptBox[FeynCalc`Tbox[a], FeynCalc`Tbox[b]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "FVD | \n "]];
 Null

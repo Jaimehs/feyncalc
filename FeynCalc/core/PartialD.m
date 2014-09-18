@@ -35,12 +35,12 @@ PartialD[x_Momentum, y__Momentum] := DOT @@ Map[PartialD, {x, y}];
 
 PartialD /:
    MakeBoxes[PartialD[x_ ^n_], TraditionalForm] :=
-    SubsuperscriptBox["\[PartialD]", Tbox[x], Tbox[n]
+    SubSuperscriptBox["\[PartialD]", FeynCalc`Tbox[x], FeynCalc`Tbox[n]
                      ] /; Head[x] === Momentum;
 
 PartialD /:
    MakeBoxes[ PartialD[x_], TraditionalForm] :=
-    SubscriptBox["\[PartialD]", ToBoxes[x,TraditionalForm]];
+    SubscripFeynCalc`Tbox["\[PartialD]", ToBoxes[x,TraditionalForm]];
 
 PartialD /:
    MakeBoxes[ PartialD[x_, HighEnergyPhysics`FeynCalc`LorentzIndex`LorentzIndex[mu__]], TraditionalForm] :=
@@ -48,7 +48,7 @@ PartialD /:
             SuperscriptBox[ToBoxes[x,TraditionalForm], ToBoxes[LorentzIndex[mu],TraditionalForm]]
             }];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PartialD | \n "]];
 Null

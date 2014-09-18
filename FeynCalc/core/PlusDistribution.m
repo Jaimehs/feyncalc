@@ -27,12 +27,12 @@ PlusDistribution /:
    MakeBoxes[
              PlusDistribution[ a_ ], TraditionalForm
             ] :=
-   SubscriptBox[ RowBox[{"(",
+   SubscripFeynCalc`Tbox[ RowBox[{"(",
                  MakeBoxes[a, TraditionalForm],")"}
                        ],"+"
                 ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PlusDistribution | \n "]];
 Null

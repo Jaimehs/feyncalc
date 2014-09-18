@@ -12,7 +12,7 @@ QuarkPropagator when CounterTerm is set to All.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "CounterT | \n "]];
 Null

@@ -16,7 +16,7 @@ OPE /: OPE^_Integer?Positive := 0;
 
    OPE /: MakeBoxes[OPE, TraditionalForm] := "\[CapitalOmega]"
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "OPE | \n "]];
 Null

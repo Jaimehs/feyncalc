@@ -114,7 +114,7 @@ DataType /: HoldPattern[Set[DataType[exp_,
 
 HoldPattern[DataType[__, _]] := False;
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DataType | \n "]];
 Null

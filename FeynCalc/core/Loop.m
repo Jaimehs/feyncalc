@@ -11,7 +11,7 @@ Loop::"usage"= "Loop is an option indicating the number of (virtual) loops.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Loop | \n "]];
 Null

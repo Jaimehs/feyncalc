@@ -24,8 +24,8 @@ SetOptions[ToString, PageWidth -> 67 ];
 SetOptions[ToString, PageWidth -> 137 ];
 
 Unprotect[SuperscriptBox];
-SuperscriptBox[FormBox[SubscriptBox[x_,y_],f_],z_] :=
-SubsuperscriptBox[x, y, z];
+SuperscriptBox[FormBox[SubscripFeynCalc`Tbox[x_,y_],f_],z_] :=
+SubSuperscriptBox[x, y, z];
 
 
 (*

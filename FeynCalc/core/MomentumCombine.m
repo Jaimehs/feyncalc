@@ -37,7 +37,7 @@ If[FreeQ[expr, momentum], FeynCalcInternal[expr], expr] //. {
       ]/;(NumberQ[n3] && NumberQ[n4]))
                              }
 ];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "MomentumCombine | \n "]];
 Null

@@ -34,9 +34,9 @@ SUND[a_,b_,c_, opt___Rule] :=
 
 SUND /:
 MakeBoxes[SUND[a_, b_,c_, opt___Rule], TraditionalForm] :=
-    SubscriptBox["d", Tbox[a,b,c]]
+    SubscripFeynCalc`Tbox["d", FeynCalc`Tbox[a,b,c]]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SUND | \n "]];
 Null

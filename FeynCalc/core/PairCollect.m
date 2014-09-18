@@ -15,7 +15,7 @@ the result is collected with respect to Pair's.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PairCollect | \n "]];
 Null

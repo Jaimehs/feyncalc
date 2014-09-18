@@ -26,11 +26,11 @@ Commutator /: Set[Commutator[a_, b_] , c_] := Block[{nd, com},
 
 Commutator/: MakeBoxes[Commutator[a_, b_],
              TraditionalForm
-            ] := RowBox[ {"[","\[NoBreak]", Tbox[a] ,"\[NoBreak]", ",",
-                          Tbox[b], "\[NoBreak]", "]"}];
+            ] := RowBox[ {"[","\[NoBreak]", FeynCalc`Tbox[a] ,"\[NoBreak]", ",",
+                          FeynCalc`Tbox[b], "\[NoBreak]", "]"}];
 
-End[]; EndPackage[];
+End[];
 
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
 If[$VeryVerbose > 0,WriteString["stdout", "Commutator | \n "]];
 Null

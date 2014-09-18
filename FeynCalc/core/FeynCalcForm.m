@@ -511,8 +511,8 @@ Global`XX=xxxx;
 plusdi[a_] := Subscripted[SequenceForm["(",a,")"][" + "]];
 
 
-End[]; EndPackage[];
+End[];
 
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
 If[$VeryVerbose > 0,WriteString["stdout", "FeynCalcForm | \n "]];
 Null

@@ -21,13 +21,13 @@ ChiralityProjector[-1] = DiracGamma[7];
 
 ChiralityProjector /:
    MakeBoxes[ChiralityProjector[1], TraditionalForm] :=
-    SubscriptBox["\[Omega]", "+"];
+    SubscripFeynCalc`Tbox["\[Omega]", "+"];
 
 ChiralityProjector /:
    MakeBoxes[ChiralityProjector[-1], TraditionalForm] :=
-    SubscriptBox["\[Omega]", "-"];
+    SubscripFeynCalc`Tbox["\[Omega]", "-"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "ChiralityProjector | \n "]];
 Null

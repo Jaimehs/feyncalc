@@ -29,7 +29,7 @@ UnDeclareNonCommutative[b__] :=
           False]&, Flatten[{b}]
      ]; Null);
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "UnDeclareNonCommutative | \n "]];
 Null

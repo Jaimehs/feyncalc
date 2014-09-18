@@ -15,12 +15,12 @@ Begin["`Private`"];
 
    GaugeXi /:
    MakeBoxes[GaugeXi[a_], TraditionalForm] :=
-    SubscriptBox["\[Xi]", TBox[a]];
+    SubscripFeynCalc`Tbox["\[Xi]", FeynCalc`Tbox[a]];
    GaugeXi /:
    MakeBoxes[GaugeXi, TraditionalForm] :=
     TagBox["\[Xi]", TraditionalForm]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "GaugeXi | \n "]];
 Null

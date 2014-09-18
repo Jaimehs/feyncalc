@@ -1,5 +1,5 @@
 
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
 
 (* Title LorentzIndex *)
 
@@ -42,14 +42,14 @@ LorentzIndex /:
                     ToBoxes[p,TraditionalForm],
                     If[{in} === {},
                        MakeBoxes[p, TraditionalForm],
-                       SubscriptBox[ToBoxes[p, TraditionalForm],
+                       SubscripFeynCalc`Tbox[ToBoxes[p, TraditionalForm],
                                     ToBoxes[in, TraditionalForm]
                                    ]
                       ]
                    ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "LorentzIndex | \n "]];
 Null
 

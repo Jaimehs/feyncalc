@@ -32,7 +32,7 @@ Momentum /:
    MakeBoxes[ Momentum[p_, in___], TraditionalForm
             ] := MakeBoxes[p, TraditionalForm];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Momentum | \n "]];
 Null

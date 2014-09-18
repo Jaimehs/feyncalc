@@ -22,7 +22,7 @@ HighEnergyPhysics`FeynCalc`SUNN`SUNN /:
               TraditionalForm
             ] := "N";
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SUNN | \n "]];
 Null

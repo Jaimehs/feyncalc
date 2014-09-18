@@ -18,7 +18,7 @@ setting should be: Mandelstam -> {}.";
 (* ------------------------------------------------------------------------ *)
 
 Begin["`Private`"];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Mandelstam | \n "]];
 Null

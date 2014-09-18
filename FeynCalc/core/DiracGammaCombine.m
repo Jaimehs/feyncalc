@@ -39,7 +39,7 @@ dircg[exp_] := exp //. gasumrules;
        Momentum[ Expand[n3 x + n4 y],di]/;(NumberQ[n3]&&NumberQ[n4])
     };
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracGammaCombine | \n "]];
 Null

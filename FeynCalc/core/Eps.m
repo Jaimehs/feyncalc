@@ -48,9 +48,9 @@ Eps[a___, mom[mu_,_Symbol], b___, ru___Rule] :=
                                   Options[Eps])===4;
    Eps /:
    MakeBoxes[Eps[x__] ,TraditionalForm] :=
-   SuperscriptBox["\[Epsilon]", Tbox[x]];
+   SuperscriptBox["\[Epsilon]", FeynCalc`Tbox[x]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Eps | \n "]];
 Null

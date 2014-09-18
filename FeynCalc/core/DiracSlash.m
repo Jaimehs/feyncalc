@@ -44,7 +44,7 @@ Apply[DOT,
                 DiracSlash[x__], TraditionalForm
                ] := MakeBoxes@@{fci[DiracSlash[x]], TraditionalForm};
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracSlash | \n "]];
 Null

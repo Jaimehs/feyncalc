@@ -24,7 +24,7 @@ ExplicitLorentzIndex /:
    MakeBoxes[ ExplicitLorentzIndex[p_, in___], TraditionalForm
             ] := p;
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "ExplicitLorentzIndex | \n "]];
 Null

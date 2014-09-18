@@ -17,9 +17,9 @@ Begin["`Private`"];
 CF /:
    MakeBoxes[
              CF, TraditionalForm
-            ] := SubscriptBox["C", "F"];
+            ] := SubscripFeynCalc`Tbox["C", "F"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "CF | \n "]];
 Null

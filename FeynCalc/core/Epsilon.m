@@ -30,14 +30,14 @@ Greater[Re[Epsilon],-1]=True;
 Greater[Re[Epsilon],0]=True;
 
    MakeBoxes[Epsilon^n_Integer?Negative, TraditionalForm] := 
-             FractionBox[1,TBox[Epsilon^(-n)]];
+             FractionBox[1,FeynCalc`Tbox[Epsilon^(-n)]];
    MakeBoxes[Epsilon^(-1),TraditionalForm] := 
-             FractionBox[1,TBox[Epsilon]];
+             FractionBox[1,FeynCalc`Tbox[Epsilon]];
    Epsilon /:
    MakeBoxes[Epsilon, TraditionalForm] :=
     TagBox["\[CurlyEpsilon]", TraditionalForm]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Epsilon | \n "]];
 Null

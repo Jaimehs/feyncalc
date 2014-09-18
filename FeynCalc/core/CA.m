@@ -18,9 +18,9 @@ Begin["`Private`"];
 CA /:
    MakeBoxes[
              CA, TraditionalForm
-            ] := SubscriptBox["C", "A"];
+            ] := SubscripFeynCalc`Tbox["C", "A"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "CA | \n "]];
 Null

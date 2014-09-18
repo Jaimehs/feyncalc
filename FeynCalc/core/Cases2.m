@@ -33,7 +33,7 @@ Cases2[expr_, f__, Heads->True] := Union[Cases[{expr},
 Cases2[expr_, f__, Heads->False] := Union[Cases[{expr},
               Alternatives@@(#[___]&/@{f,g}),Infinity,Heads->False]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Cases2 | \n "]];
 Null

@@ -16,7 +16,7 @@ an intermediate stage of the calculation.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "IntermediateSubstitutions | \n "]];
 Null

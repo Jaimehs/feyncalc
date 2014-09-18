@@ -16,7 +16,7 @@ setting may also be a list with the names of the abbrevations.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "IsolateNames | \n "]];
 Null

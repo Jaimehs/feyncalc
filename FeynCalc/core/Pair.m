@@ -72,12 +72,12 @@ HighEnergyPhysics`FeynCalc`ExplicitLorentzIndex`ExplicitLorentzIndex)[a_,d1___],
 HighEnergyPhysics`FeynCalc`ExplicitLorentzIndex`ExplicitLorentzIndex)[b_,d2___] ],
              TraditionalForm
             ] := If[$LorentzIndices===True,
-                    SuperscriptBox["g", Tbox[LorentzIndex[a,d1], LorentzIndex[b,d2]] ],
-                    SuperscriptBox["g", Tbox[a,b] ]
+                    SuperscriptBox["g", FeynCalc`Tbox[LorentzIndex[a,d1], LorentzIndex[b,d2]] ],
+                    SuperscriptBox["g", FeynCalc`Tbox[a,b] ]
                    ];
 
 MakeBoxes[Pair[a_,b_]^n_Integer?Positive, TraditionalForm] :=
- RowBox[{SuperscriptBox[Tbox[Pair[a,b]],n]}];
+ RowBox[{SuperscriptBox[FeynCalc`Tbox[Pair[a,b]],n]}];
 
 initialDownValues = DownValues[Pair];
 
@@ -86,19 +86,19 @@ Pair /:
     HighEnergyPhysics`FeynCalc`Momentum`Momentum[a__],
     HighEnergyPhysics`FeynCalc`Momentum`Momentum[a__]
                  ], TraditionalForm
-            ] := SuperscriptBox[Tbox[Momentum[a]],2] /; FreeQ[{a},Plus];
+            ] := SuperscriptBox[FeynCalc`Tbox[Momentum[a]],2] /; FreeQ[{a},Plus];
 
 MakeBoxes[Pair[
     HighEnergyPhysics`FeynCalc`Momentum`Momentum[a__],
     HighEnergyPhysics`FeynCalc`Momentum`Momentum[a__]
                  ]^2, TraditionalForm
-            ] := SuperscriptBox[Tbox[Momentum[a]],4] /; FreeQ[{a},Plus];
+            ] := SuperscriptBox[FeynCalc`Tbox[Momentum[a]],4] /; FreeQ[{a},Plus];
 
 MakeBoxes[Pair[
     HighEnergyPhysics`FeynCalc`Momentum`Momentum[a__],
     HighEnergyPhysics`FeynCalc`Momentum`Momentum[a__]
                  ]^3, TraditionalForm
-            ] := SuperscriptBox[Tbox[Momentum[a]],6];
+            ] := SuperscriptBox[FeynCalc`Tbox[Momentum[a]],6];
 
 (* Changed because of infinite recursion on
    Pair[a Momentum[k] + b Momentum[p], a Momentum[k] + b Momentum[p]]
@@ -119,14 +119,14 @@ Pair /:
           HighEnergyPhysics`FeynCalc`Momentum`Momentum[a_Plus,di___],
           HighEnergyPhysics`FeynCalc`Momentum`Momentum[a_Plus,dii___]],
                   TraditionalForm
-                 ] := SuperscriptBox[Tbox["(", a,")"],2];
+                 ] := SuperscriptBox[FeynCalc`Tbox["(", a,")"],2];
 
 MakeBoxes[Pair[
           HighEnergyPhysics`FeynCalc`Momentum`Momentum[a_,di___],
           HighEnergyPhysics`FeynCalc`Momentum`Momentum[a_,dii___]
               ]^m_Integer,
           TraditionalForm
-         ] := SuperscriptBox[Tbox["(", a,")"], #]&@@{2m};
+         ] := SuperscriptBox[FeynCalc`Tbox["(", a,")"], #]&@@{2m};
 
 Pair /:
         MakeBoxes[Pair[
@@ -136,20 +136,20 @@ Pair /:
                  ] := Which[
                        FreeQ2[{a,b},{Times,Plus}],
                        If[$PairBrackets === True,
-                          Tbox["(", Momentum[a,di], "\[CenterDot]",
+                          FeynCalc`Tbox["(", Momentum[a,di], "\[CenterDot]",
                                     Momentum[b,dii], ")"
                               ],
-                          Tbox[Momentum[a,di], "\[CenterDot]",
+                          FeynCalc`Tbox[Momentum[a,di], "\[CenterDot]",
                                Momentum[b,dii]]
                          ],
                        FreeQ2[{a},{Times,Plus}],
-                       Tbox[Momentum[a,di],"\[CenterDot]",
+                       FeynCalc`Tbox[Momentum[a,di],"\[CenterDot]",
                             "(",Momentum[b,dii],")"],
                        FreeQ2[{b},{Times,Plus}],
-                       Tbox["(",Momentum[a,di],")","\[CenterDot]",
+                       FeynCalc`Tbox["(",Momentum[a,di],")","\[CenterDot]",
                             Momentum[b,dii]],
                        !FreeQ2[{a,b},{Times,Plus}],
-                       Tbox["(",Momentum[a,di],")","\[CenterDot]",
+                       FeynCalc`Tbox["(",Momentum[a,di],")","\[CenterDot]",
                             "(",Momentum[b,dii],")"]
                            ];
 
@@ -162,9 +162,9 @@ Pair /:
                               b_,Complex[0,1]],___]
                  ], TraditionalForm
             ] := RowBox[{
-        SubscriptBox["\[CurlyEpsilon]",
-                     Tbox[LorentzIndex[a]]],
-                     "(",Tbox[b],")"}];
+        SubscripFeynCalc`Tbox["\[CurlyEpsilon]",
+                     FeynCalc`Tbox[LorentzIndex[a]]],
+                     "(",FeynCalc`Tbox[b],")"}];
 
 Pair /:
    MakeBoxes[Pair[
@@ -175,9 +175,9 @@ Pair /:
                               b_,Complex[0,-1]],___]
                  ], TraditionalForm
             ] := RowBox[{
-        SubsuperscriptBox["\[CurlyEpsilon]",
-                          Tbox[LorentzIndex[a]], "*"
-                          ], "(", Tbox[b], ")"
+        SubSuperscriptBox["\[CurlyEpsilon]",
+                          FeynCalc`Tbox[LorentzIndex[a]], "*"
+                          ], "(", FeynCalc`Tbox[b], ")"
                         }
                        ];
 
@@ -188,9 +188,9 @@ Pair /:
               HighEnergyPhysics`FeynCalc`Momentum`Momentum[
                    b_Subscripted, di___]
                  ], TraditionalForm
-            ] := SubsuperscriptBox[Tbox[b[[1,0]]],
-                                   Tbox@@b[[1]],
-                                    Tbox[LorentzIndex[a]]];
+            ] := SubSuperscriptBox[FeynCalc`Tbox[b[[1,0]]],
+                                   FeynCalc`Tbox@@b[[1]],
+                                    FeynCalc`Tbox[LorentzIndex[a]]];
 
 Pair /:
    MakeBoxes[Pair[
@@ -199,8 +199,8 @@ Pair /:
               HighEnergyPhysics`FeynCalc`Momentum`Momentum[
                    b_Subscript,di___]
                  ], TraditionalForm
-            ] := SubsuperscriptBox[Tbox[b[[1]]], Tbox@@Rest[b],
-                                    Tbox[LorentzIndex[a]]];
+            ] := SubSuperscriptBox[FeynCalc`Tbox[b[[1]]], FeynCalc`Tbox@@Rest[b],
+                                    FeynCalc`Tbox[LorentzIndex[a]]];
  
 Pair /:
    MakeBoxes[Pair[
@@ -210,7 +210,7 @@ Pair /:
                  ],
              TraditionalForm
             ] := SuperscriptBox[
-                    Tbox[Momentum[b,di] ], Tbox[LorentzIndex[a]] 
+                    FeynCalc`Tbox[Momentum[b,di] ], FeynCalc`Tbox[LorentzIndex[a]] 
                    ]/;Head[b]=!=Plus;
 
 Pair /:
@@ -221,7 +221,7 @@ Pair /:
                  ],
              TraditionalForm
             ] := SuperscriptBox[
-                    Tbox[ "(",Momentum[b,di], ")"], Tbox[LorentzIndex[a]] ];
+                    FeynCalc`Tbox[ "(",Momentum[b,di], ")"], FeynCalc`Tbox[LorentzIndex[a]] ];
 
 Pair /:
    MakeBoxes[Pair[
@@ -231,13 +231,13 @@ Pair /:
                  ],
              TraditionalForm
             ] := SuperscriptBox[
-                    Tbox[ "(",Momentum[b+c,di], ")"], Tbox[LorentzIndex[a]] ];
+                    FeynCalc`Tbox[ "(",Momentum[b+c,di], ")"], FeynCalc`Tbox[LorentzIndex[a]] ];
 
 MakeBoxes[Pair[HighEnergyPhysics`FeynCalc`Momentum`Momentum[a_,___],
                HighEnergyPhysics`FeynCalc`Momentum`Momentum[a_,___]
-              ]^n_Integer, TraditionalForm] := SuperscriptBox[TBox[a], #]&@@{2 n};
+              ]^n_Integer, TraditionalForm] := SuperscriptBox[FeynCalc`Tbox[a], #]&@@{2 n};
                                                                                                                         
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Pair | \n "]];
 Null

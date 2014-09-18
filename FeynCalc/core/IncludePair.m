@@ -14,7 +14,7 @@ Possible settings are True and False.";
 (* ------------------------------------------------------------------------ *)
 
 Begin["`Private`"];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "IncludePair | \n "]];
 Null

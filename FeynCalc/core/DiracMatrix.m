@@ -57,9 +57,9 @@ DiracMatrix[a_, opt___Rule] := (DiracGamma[LorentzIndex[a,
                                ]&,
                               {x,y,z}
                              ] /; Head[z]=!=Rule;
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
 
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracMatrix | \n "]];
 Null

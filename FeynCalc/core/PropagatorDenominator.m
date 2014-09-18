@@ -35,7 +35,7 @@ PropagatorDenominator/:
 
 PD = PropagatorDenominator;
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PropagatorDenominator | \n "]];
 Null

@@ -21,9 +21,9 @@ SetAttributes[SD, Orderless];
 
 HighEnergyPhysics`FeynCalc`SD`SD /:
 MakeBoxes[HighEnergyPhysics`FeynCalc`SD`SD[a_, b_], TraditionalForm] :=
-    SubscriptBox["\[Delta]", HighEnergyPhysics`FeynCalc`Tbox[a,b]];
+    SubscripFeynCalc`Tbox["\[Delta]", HighEnergyPhysics`FeynCalc`FeynCalc`Tbox[a,b]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SD | \n "]];
 Null

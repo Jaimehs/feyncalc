@@ -13,7 +13,7 @@ FeynmanParametrize.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "FeynmanParameterNames | \n "]];
 Null

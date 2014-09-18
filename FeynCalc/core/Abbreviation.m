@@ -16,6 +16,6 @@ Begin["`Private`"];
 
 End[];
 EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
 If[$VeryVerbose > 0,WriteString["stdout", "Abbreviation | \n "]];
 Null

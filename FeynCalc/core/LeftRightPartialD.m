@@ -42,9 +42,9 @@ LeftRightPartialD[Momentum[OPEDelta]^n_Integer?Positive] :=
 LeftRightPartialD /:
    MakeBoxes[ LeftRightPartialD[x_] , TraditionalForm
             ] :=
-    SubscriptBox[OverscriptBox["\[PartialD]", "\[LeftRightArrow]"], Tbox[x]];
+    SubscripFeynCalc`Tbox[OverscripFeynCalc`Tbox["\[PartialD]", "\[LeftRightArrow]"], FeynCalc`Tbox[x]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "LeftRightPartialD | \n "]];
 Null

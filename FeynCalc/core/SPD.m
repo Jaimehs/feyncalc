@@ -14,7 +14,7 @@ SetAttributes[SPD, Orderless];
 SPD[a_] := SPD[a,a];
 
 MakeBoxes[SPD[a_,a_], TraditionalForm] := SuperscriptBox[
-   RowBox[{"(",TBox[a],")"}], 2] /; !FreeQ[a, Plus];
+   RowBox[{"(",FeynCalc`Tbox[a],")"}], 2] /; !FreeQ[a, Plus];
 
 SPD/: MakeBoxes[SPD[a_, b_], TraditionalForm] :=
     ToBoxes[
@@ -22,15 +22,15 @@ SPD/: MakeBoxes[SPD[a_, b_], TraditionalForm] :=
             TraditionalForm] ;
 
 MakeBoxes[SPD[a_,a_]^n_Plus, TraditionalForm] := SuperscriptBox[
-   RowBox[{"(",SuperscriptBox[TBox[a], 2],")"}], TBox[n]];
+   RowBox[{"(",SuperscriptBox[FeynCalc`Tbox[a], 2],")"}], FeynCalc`Tbox[n]];
 
 MakeBoxes[SPD[a_,a_]^n_Times, TraditionalForm] := SuperscriptBox[
-   RowBox[{"(",SuperscriptBox[TBox[a], 2],")"}], TBox[n]];
+   RowBox[{"(",SuperscriptBox[FeynCalc`Tbox[a], 2],")"}], FeynCalc`Tbox[n]];
 
-MakeBoxes[SPD[a_,a_]^n_Integer, TraditionalForm] := (SuperscriptBox[TBox[a], #]&@@{2 n}
+MakeBoxes[SPD[a_,a_]^n_Integer, TraditionalForm] := (SuperscriptBox[FeynCalc`Tbox[a], #]&@@{2 n}
  ) /; FreeQ[a, Plus];
                                                                                                                         
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SPD | \n "]];
 Null

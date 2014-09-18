@@ -26,7 +26,7 @@ PauliSigma[3] = { {1, 0}, {0,-1}};
 
 PauliSigma[] = {PauliSigma[1], PauliSigma[2], PauliSigma[3]};
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PauliSigma | \n "]];
 Null

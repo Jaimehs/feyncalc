@@ -40,11 +40,11 @@ LeftRightPartialD2[Momentum[OPEDelta]^n_Integer?Positive] :=
 LeftRightPartialD2 /:
    MakeBoxes[ LeftRightPartialD2[x_] , TraditionalForm
             ] :=
-    SubscriptBox[OverscriptBox[
-       "\[PartialD]", "\[LeftRightArrow]"], Tbox[x]];
+    SubscripFeynCalc`Tbox[OverscripFeynCalc`Tbox[
+       "\[PartialD]", "\[LeftRightArrow]"], FeynCalc`Tbox[x]];
 
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "LeftRightPartialD2 | \n "]];
 Null

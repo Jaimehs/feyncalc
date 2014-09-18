@@ -20,12 +20,12 @@ Begin["`Private`"];
 
    LCD /:
    MakeBoxes[LCD [x___][y___] ,TraditionalForm] :=
-   SuperscriptBox["\[Epsilon]", Tbox[x,y]];
+   SuperscriptBox["\[Epsilon]", FeynCalc`Tbox[x,y]];
    LCD /:
    MakeBoxes[LCD [x__] ,TraditionalForm] :=
-   SuperscriptBox["\[Epsilon]", Tbox[x]];
+   SuperscriptBox["\[Epsilon]", FeynCalc`Tbox[x]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "LCD | \n "]];
 Null

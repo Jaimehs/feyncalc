@@ -27,7 +27,7 @@ FAD/:
              ] := ToBoxes[1/ Apply[Times,Map[ff, {a}]
                                   ],
                           TraditionalForm];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "FAD | \n "]];
 Null

@@ -48,14 +48,14 @@ Protect[Conjugate];
 Polarization /:
 (* suppress color indices in the typesetting for the moment *)
    MakeBoxes[Polarization[a_,Complex[0, 1],___], TraditionalForm] :=
-        Tbox["\[CurlyEpsilon]","(",a,")"];
+        FeynCalc`Tbox["\[CurlyEpsilon]","(",a,")"];
 
 Polarization /:
 (* suppress color indices in the typesetting for the moment *)
    MakeBoxes[Polarization[a_, Complex[0, -1],___], TraditionalForm] :=
-        Tbox[Superscript["\[CurlyEpsilon]", "*"], "(", a, ")"];
+        FeynCalc`Tbox[Superscript["\[CurlyEpsilon]", "*"], "(", a, ")"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Polarization | \n "]];
 Null

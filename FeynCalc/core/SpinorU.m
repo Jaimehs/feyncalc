@@ -15,14 +15,14 @@ MakeContext[DeclareNonCommutative];
 DeclareNonCommutative[SpinorU];
 
    SpinorU /:
-    MakeBoxes[SpinorU[p_], TraditionalForm] := Tbox["u","(",p,")"];
+    MakeBoxes[SpinorU[p_], TraditionalForm] := FeynCalc`Tbox["u","(",p,")"];
    SpinorU /:
     MakeBoxes[SpinorU[p_,m_,___], TraditionalForm] :=
-    Tbox["u","(",p,",",m,")"];
+    FeynCalc`Tbox["u","(",p,",",m,")"];
    SpinorU /:
-    MakeBoxes[SpinorU[p_,0,___], TraditionalForm] := Tbox["u","(",p,")"];
+    MakeBoxes[SpinorU[p_,0,___], TraditionalForm] := FeynCalc`Tbox["u","(",p,")"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SpinorU | \n "]];
 Null

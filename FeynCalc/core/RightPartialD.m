@@ -40,16 +40,16 @@ RightPartialD[Momentum[OPEDelta]^n_Integer?Positive] :=
 *)
    RightPartialD /:
    MakeBoxes[RightPartialD[x_ ^n_],TraditionalForm] :=
-    SubsuperscriptBox[RowBox[{
-      OverscriptBox["\[PartialD]", "\[RightArrow]"]}], Tbox[" ",x],Tbox[n]
+    SubSuperscriptBox[RowBox[{
+      OverscripFeynCalc`Tbox["\[PartialD]", "\[RightArrow]"]}], FeynCalc`Tbox[" ",x],FeynCalc`Tbox[n]
                      ] /; Head[x] === Momentum;
 
    RightPartialD /:
    MakeBoxes[RightPartialD[x_] ,TraditionalForm] :=
-    SubscriptBox[RowBox[{
-      OverscriptBox["\[PartialD]", "\[RightArrow]"]}], Tbox[x]];
+    SubscripFeynCalc`Tbox[RowBox[{
+      OverscripFeynCalc`Tbox["\[PartialD]", "\[RightArrow]"]}], FeynCalc`Tbox[x]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "RightPartialD | \n "]];
 Null

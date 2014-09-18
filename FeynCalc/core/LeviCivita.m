@@ -55,7 +55,7 @@ LeviCivita[x___, ops___Rule][y___, ru___Rule] :=
                  ]
              ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "LeviCivita | \n "]];
 Null

@@ -75,7 +75,7 @@ SUNDeltaContract/: SUNDeltaContract[i_SUNIndex, j_SUNIndex ] y_[z__] :=
                FreeQ[y[z], SUNDeltaContract[__]^n_Integer?Negative] /;
                noint[i,j];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SUNDeltaContract | \n "]];
 Null

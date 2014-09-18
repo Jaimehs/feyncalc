@@ -19,9 +19,9 @@ DeltaFunction[0]:=1;
 
 DeltaFunction /:
    MakeBoxes[ DeltaFunction[y_], TraditionalForm] :=
-    RowBox[{"\[Delta]", "(", Tbox[y], ")"}];
+    RowBox[{"\[Delta]", "(", FeynCalc`Tbox[y], ")"}];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DeltaFunction | \n "]];
 Null

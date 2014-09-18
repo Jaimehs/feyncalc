@@ -24,7 +24,7 @@ gamma2[m_ /; Head[m]=!=Plus] :=  Gamma[1 + m]/m;
 exp /. Gamma -> gamma1 /. gamma2 -> Gamma
                           ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "GammaExpand | \n "]];
 Null

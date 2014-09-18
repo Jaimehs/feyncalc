@@ -18,7 +18,7 @@ set: DiracBasis[1] = S; DiracBasis[DiracMatrix[mu]] = P; etc.).";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracBasis | \n "]];
 Null

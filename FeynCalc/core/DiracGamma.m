@@ -104,28 +104,28 @@ DiracGamma /:
 
 DiracGamma /:
   MakeBoxes[ DiracGamma[lo_[in_], ru___Rule], TraditionalForm ] :=
-   (SuperscriptBox[RowBox[{OverscriptBox["\[Gamma]", "_"]}], Tbox[in]]
+   (SuperscriptBox[RowBox[{OverscripFeynCalc`Tbox["\[Gamma]", "_"]}], FeynCalc`Tbox[in]]
    ) /; $BreitMaison === True && (lo === LorentzIndex || lo === ExplicitLorentzIndex);
 
 DiracGamma /:
   MakeBoxes[ DiracGamma[lo_[in_], ru___Rule], TraditionalForm ] :=
-   (SuperscriptBox["\[Gamma]", Tbox[lo[in]]]
+   (SuperscriptBox["\[Gamma]", FeynCalc`Tbox[lo[in]]]
    ) /; $BreitMaison === False && (lo === LorentzIndex || lo === ExplicitLorentzIndex);
 
 DiracGamma /:
   MakeBoxes[ DiracGamma[lo_[in_,d_Symbol], _Symbol,
            ru___Rule], TraditionalForm ] :=
-   (SuperscriptBox["\[Gamma]", Tbox[lo[in,d]]]
+   (SuperscriptBox["\[Gamma]", FeynCalc`Tbox[lo[in,d]]]
    ) /; (lo === LorentzIndex || lo === ExplicitLorentzIndex);
 
 DiracGamma /:
   MakeBoxes[ DiracGamma[lo_[in_, d_Symbol-4], d_Symbol-4,
              ru___Rule], TraditionalForm
            ] :=
-      SuperscriptBox[RowBox[{OverscriptBox["\[Gamma]","^"]}], Tbox[in]
+      SuperscriptBox[RowBox[{OverscripFeynCalc`Tbox["\[Gamma]","^"]}], FeynCalc`Tbox[in]
                     ] /; (lo === LorentzIndex || lo === ExplicitLorentzIndex);
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracGamma | \n "]];
 Null

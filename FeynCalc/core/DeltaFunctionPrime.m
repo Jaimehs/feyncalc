@@ -17,10 +17,10 @@ Begin["`Private`"];
 DeltaFunctionPrime /:
    MakeBoxes[ DeltaFunctionPrime[y_], TraditionalForm] :=
     RowBox[{SuperscriptBox["\[Delta]","\[Prime]"],
-           "(", Tbox[y], ")"}
+           "(", FeynCalc`Tbox[y], ")"}
           ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DeltaFunctionPrime | \n "]];
 Null

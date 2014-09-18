@@ -27,10 +27,10 @@ AntiCommutator /: Set[AntiCommutator[a_, b_] , c_] := Block[{nd, acom},
   AntiCommutator /:
    MakeBoxes[
     AntiCommutator[a_, b_], TraditionalForm
-            ] := Tbox["{", a, ",", "\[MediumSpace]", b, "}"];
+            ] := FeynCalc`Tbox["{", a, ",", "\[MediumSpace]", b, "}"];
 
-End[]; EndPackage[];
+End[];
 
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
 If[$VeryVerbose > 0,WriteString["stdout", "AntiCommutator | \n "]];
 Null

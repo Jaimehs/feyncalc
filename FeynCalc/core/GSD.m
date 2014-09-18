@@ -21,22 +21,22 @@ GSD[x_, y__] := DOT @@ Map[GSD, {x, y}];
 
 GSD/:
   MakeBoxes[ GSD[a_/;FreeQ[a,Plus]],
-             TraditionalForm ] := Tbox["\[Gamma]", "\[CenterDot]", a];
+             TraditionalForm ] := FeynCalc`Tbox["\[Gamma]", "\[CenterDot]", a];
 GSD/:
   MakeBoxes[ GSD[a_/;!FreeQ[a,Plus]],
              TraditionalForm ] :=
-  Tbox["\[Gamma]", "\[CenterDot]", "(",a,")"];
+  FeynCalc`Tbox["\[Gamma]", "\[CenterDot]", "(",a,")"];
 
-gsg[a_]:=If[FreeQ[y, Plus], Tbox["\[Gamma]", a],
-                            Tbox["\[Gamma]", "(",a,")"]
+gsg[a_]:=If[FreeQ[y, Plus], FeynCalc`Tbox["\[Gamma]", a],
+                            FeynCalc`Tbox["\[Gamma]", "(",a,")"]
            ];
 
 GSD/:
   MakeBoxes[ GSD[a_, b__],
              TraditionalForm
-           ] := Tbox@@Map[gsg, {a,b}]
+           ] := FeynCalc`Tbox@@Map[gsg, {a,b}]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "GSD | \n "]];
 Null

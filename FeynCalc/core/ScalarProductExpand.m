@@ -19,7 +19,7 @@ Begin["`Private`"];
 
 ScalarProductExpand = MakeContext["ExpandScalarProduct"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "ScalarProductExpand | \n "]];
 Null

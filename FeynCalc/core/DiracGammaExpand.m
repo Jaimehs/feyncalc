@@ -31,7 +31,7 @@ gaev[x_,di___]       := gaevlin[Expand[x//MomentumExpand, Momentum], di];
 gaevlin[n_Integer]             := DiracGamma[n]; (* necessary !!!!!! *)
 gaevlin[x_Plus, di___]         := Map[gaevlin[#, di]&, x];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracGammaExpand | \n "]];
 Null

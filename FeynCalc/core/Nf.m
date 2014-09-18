@@ -14,9 +14,9 @@ Nf::"usage" =
 
 Begin["`Private`"];
    Nf /:
-   MakeBoxes[Nf, TraditionalForm] := SubscriptBox["N", "f"];
+   MakeBoxes[Nf, TraditionalForm] := SubscripFeynCalc`Tbox["N", "f"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Nf | \n "]];
 Null

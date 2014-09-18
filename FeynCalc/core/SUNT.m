@@ -18,15 +18,15 @@ MakeContext["DeclareNonCommutative"][SUNT];
 
 SUNT /:
   MakeBoxes[ SUNT[a_], TraditionalForm] :=
-    SubscriptBox["T", ToBoxes[a, TraditionalForm]];
+    SubscripFeynCalc`Tbox["T", ToBoxes[a, TraditionalForm]];
 
 SUNT /:
   MakeBoxes[
             SUNT[a_,b__], TraditionalForm
-           ] := RowBox[ Map[SubscriptBox["T",
+           ] := RowBox[ Map[SubscripFeynCalc`Tbox["T",
                ToBoxes[#, TraditionalForm]]&, {a, b}] ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SUNT | \n "]];
 Null

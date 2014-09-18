@@ -24,11 +24,11 @@ GAD[x_, y__] := DOT @@ Map[GAD,{x,y}];
 
 GAD /:
   MakeBoxes[ GAD[x_], TraditionalForm ] := If[$Covariant,
-             SubscriptBox["\[Gamma]",MakeBoxes[x,TraditionalForm]],
+             SubscripFeynCalc`Tbox["\[Gamma]",MakeBoxes[x,TraditionalForm]],
              SuperscriptBox["\[Gamma]",MakeBoxes[x,TraditionalForm]]
                                              ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "GAD | \n "]];
 Null

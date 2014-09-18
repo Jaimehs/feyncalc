@@ -12,7 +12,7 @@ for TID and OneLoopSimplify.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DimensionalReduction | \n "]];
 Null

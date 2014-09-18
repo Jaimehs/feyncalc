@@ -15,7 +15,7 @@ If set to False, DiracTrace remains unevaluated.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracTraceEvaluate | \n "]];
 Null

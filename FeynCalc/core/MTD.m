@@ -18,9 +18,9 @@ fci := fci = MakeContext["FeynCalcInternal"];
 
 MTD /:
    MakeBoxes[ MTD[x_,y_], TraditionalForm ] :=
-SuperscriptBox["g", HighEnergyPhysics`FeynCalc`Tbox[x,y]];
+SuperscriptBox["g", HighEnergyPhysics`FeynCalc`FeynCalc`Tbox[x,y]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "MTD | \n "]];
 Null

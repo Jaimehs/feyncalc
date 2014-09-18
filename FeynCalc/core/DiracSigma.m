@@ -44,9 +44,9 @@ DiracSigma[a_. DiracGamma[b__], c_  DiracGamma[d__]] :=
 
    DiracSigma /:
    MakeBoxes[DiracSigma[_[x_,___], _[y_,___]], TraditionalForm] :=
-   SuperscriptBox["\[Sigma]", Tbox[x,y]];
+   SuperscriptBox["\[Sigma]", FeynCalc`Tbox[x,y]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracSigma | \n "]];
 Null

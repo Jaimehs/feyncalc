@@ -13,9 +13,9 @@ AntiQuarkField::"usage" =
 Begin["`Private`"];
 
 AntiQuarkField /: MakeBoxes[AntiQuarkField, TraditionalForm] :=
-  OverscriptBox["\[Psi]","_"];
+  OverscripFeynCalc`Tbox["\[Psi]","_"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "AntiQuarkField | \n "]];
 Null

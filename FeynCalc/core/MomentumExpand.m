@@ -29,7 +29,7 @@ fourvecevlin[n_?NumberQ z_, dime___]  := n Momentum[z, dime];
 
 MomentumExpand[x_] := x /. Momentum -> fourvecev;
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "MomentumExpand | \n "]];
 Null

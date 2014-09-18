@@ -39,7 +39,7 @@ SetAttributes[FCPrint, HoldAll];
 
 End[];
 EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
 If[ $VeryVerbose > 0,
     WriteString["stdout", "FCPrint | \n "]
 ];

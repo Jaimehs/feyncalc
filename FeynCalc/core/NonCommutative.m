@@ -15,7 +15,7 @@ DataType[x, NonCommutative] = True.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "NonCommutative | \n "]];
 Null

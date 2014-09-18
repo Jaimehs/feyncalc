@@ -18,7 +18,7 @@ Begin["`Private`"];
 ScaleMu /:
 MakeBoxes[ScaleMu, TraditionalForm] := "\[Mu]";
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "ScaleMu | \n "]];
 Null

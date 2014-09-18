@@ -23,9 +23,9 @@ MT[Momentum[a_,D], Momentum[b_,D]] := SPD[a,b];
 
 
    MT /: MakeBoxes[ MT[x_,y__], TraditionalForm ] :=
-   SuperscriptBox["g", HighEnergyPhysics`FeynCalc`Tbox[x,y]];
+   SuperscriptBox["g", HighEnergyPhysics`FeynCalc`FeynCalc`Tbox[x,y]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "MT | \n "]];
 Null

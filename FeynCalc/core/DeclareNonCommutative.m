@@ -25,7 +25,7 @@ DeclareNonCommutative[b__] :=
           True]&, {b}
      ]; Null);
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DeclareNonCommutative | \n "]];
 Null

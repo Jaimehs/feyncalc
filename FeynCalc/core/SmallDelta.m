@@ -16,7 +16,7 @@ Begin["`Private`"];
    SmallDelta /:
    MakeBoxes[SmallDelta, TraditionalForm] := "\[Delta]"
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SmallDelta | \n "]];
 Null

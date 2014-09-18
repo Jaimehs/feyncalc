@@ -15,7 +15,7 @@ E.g. DataType[Epsilon, PositiveNumber] = True (by default). ";
 
 Begin["`Private`"]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PositiveNumber | \n "]];
 Null

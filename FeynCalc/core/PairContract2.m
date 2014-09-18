@@ -31,7 +31,7 @@ PairContract2[LorentzIndex[z_],y_] :=
 If[FreeQ[{x,y},LorentzIndex], Pair[x,y],
 PairContract2[x,y]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PairContract2 | \n "]];
 Null

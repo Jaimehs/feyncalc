@@ -15,7 +15,7 @@ of two Eps are replaced via the determinant formula.";
 (* ------------------------------------------------------------------------ *)
 
 Begin["`Private`"];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "EpsContract | \n "]];
 Null

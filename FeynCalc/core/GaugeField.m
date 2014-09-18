@@ -16,6 +16,6 @@ Begin["`Private`"];
 
    GaugeField /: MakeBoxes[GaugeField, TraditionalForm] := "A";
 
-End[]; EndPackage[];
+End[];
 If[$VeryVerbose > 0,WriteString["stdout", "GaugeField | \n "]];
 Null

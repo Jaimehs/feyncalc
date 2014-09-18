@@ -123,7 +123,7 @@ ReplaceAll[y_, ScalarProduct[a_, b_] -> z_] :=
 Protect[ReplaceAll];
 *)
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "ScalarProduct | \n "]];
 Null

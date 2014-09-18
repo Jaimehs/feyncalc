@@ -19,8 +19,8 @@ FreeQ2 := FreeQ2 = MakeContext["FreeQ2"];
 Explicit := Explicit = MakeContext["Explicit"];
 sunt     := sunt     = MakeContext["SUNT"];
 suntrace := suntrace = MakeContext["SUNTrace"];
-(*TBox is in context HighEnergyPhysics`FeynCalc`. F.Orellana, 30/11/2003*)
-(*MakeContext["TBox"];*)
+(*FeynCalc`Tbox is in context HighEnergyPhysics`FeynCalc`. F.Orellana, 30/11/2003*)
+(*MakeContext["FeynCalc`Tbox"];*)
 
 Options[SUNF] = {Explicit -> False(*, fci -> True*)};
 
@@ -51,9 +51,9 @@ HoldPattern[SUNF[i_,j_,k_,l_, op___Rule|op___List]]:= (
                                      )/;
      (Explicit/.Flatten[Join[{op},Options[SUNF]]]) === True;
 
-   tbox[a__] := RowBox @ Map[(MakeBoxes @@ {#, TraditionalForm})&, {a}];
+   FeynCalc`Tbox[a__] := RowBox @ Map[(MakeBoxes @@ {#, TraditionalForm})&, {a}];
 
-totr[Subscript[y_,in__Integer]] := SubscriptBox[totr[y],RowBox[{in}]];
+totr[Subscript[y_,in__Integer]] := SubscripFeynCalc`Tbox[totr[y],RowBox[{in}]];
 
 totr[y_Symbol] := If[FormatValues[Evaluate[y]] === {},
                      ToString[y],
@@ -62,7 +62,7 @@ totr[y_String] := y;
 totr[y_] := ToBoxes[y, TraditionalForm] /; Head[y]=!=Symbol;
 
 (* this is not needed here any more, commented out 25th September 2003
-Tbox[a__] :=
+FeynCalc`Tbox[a__] :=
 (RowBox @ (Insert[
   Map[totr, {a}], "\[NoBreak]",
     Array[{#}&,Length[{a}]-1,2]]));
@@ -71,9 +71,9 @@ Tbox[a__] :=
    SUNF /:
    MakeBoxes[
              SUNF[a_,b_,c__], TraditionalForm
-            ] := SubscriptBox@@{"f", Tbox[a,b,c]};
+            ] := SubscripFeynCalc`Tbox@@{"f", FeynCalc`Tbox[a,b,c]};
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SUNF | \n "]];
 Null

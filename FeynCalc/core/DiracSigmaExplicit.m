@@ -30,7 +30,7 @@ dirsigex[DiracSlash[a_, b_]] := dirsigex[DiracSlash[a,b]] =
 
 DiracSigmaExplicit[x_] := fci[x]/. DiracSigma -> dirsigex;
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracSigmaExplicit | \n "]];
 Null

@@ -55,7 +55,7 @@ Anti5[x_, -Infinity] := Anti5[x, -$RecursionLimit];
 Anti5[x_, -Infinity] := FixedPoint[Anti5[#,-1]&, x,
                                    $RecursionLimit];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Anti5 | \n "]];
 Null

@@ -28,7 +28,7 @@ NonCommQ[x_]           := MemSet[NonCommQ[x],
                           FreeQ2[x /. excludeTraces, $NonComm]=!=True];
                        (*The =!= above put in 11/9-2002, F.Orellana.*)
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "NonCommQ | \n "]];
 Null

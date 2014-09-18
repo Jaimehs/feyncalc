@@ -45,9 +45,9 @@ polVec[k_,mu_,glu_]:=
         fourv[polarization[k, I, glu], mu, dimension -> 4]
        ];
 
-End[]; EndPackage[];
+End[];
 
 
 
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
 

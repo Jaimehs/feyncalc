@@ -13,7 +13,7 @@ specifying in which order the arguments of D0 are to be permuted.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PaVeOrderList | \n "]];
 Null

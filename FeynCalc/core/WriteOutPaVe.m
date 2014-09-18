@@ -15,7 +15,7 @@ files with names generated from this string and the arguments of PaVe.";
 Begin["`Private`"];
    
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "WriteOutPaVe | \n "]];
 Null

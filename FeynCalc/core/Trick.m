@@ -74,7 +74,7 @@ Trick[x_] := Block[{tt, paulisigsimp, sigident,doot,cov,palr},
                 ];
                 tt];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "Trick | \n "]];
 Null

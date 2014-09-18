@@ -17,10 +17,10 @@ SetAttributes[SUNDelta, Orderless];
 
    SUNDelta /:
    MakeBoxes[SUNDelta[a_, b_], TraditionalForm ] :=
-   SubscriptBox["\[Delta]",
-     HighEnergyPhysics`FeynCalc`Tbox[a,b]]
+   SubscripFeynCalc`Tbox["\[Delta]",
+     HighEnergyPhysics`FeynCalc`FeynCalc`Tbox[a,b]]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "SUNDelta | \n "]];
 Null

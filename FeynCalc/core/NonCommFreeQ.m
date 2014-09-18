@@ -31,7 +31,7 @@ NonCommFreeQ[x_]           := MemSet[NonCommFreeQ[x],
   DataType[x,NonCommutative]=True or DataType[x,NonCommutative]=False.
   Rolf implemented it this way to gain speed I suppose. F.Orellana*)
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "NonCommFreeQ | \n "]];
 Null

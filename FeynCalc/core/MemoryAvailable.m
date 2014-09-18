@@ -17,7 +17,7 @@ The default setting is $MemoryAvailable.";
 
 Begin["`Private`"];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "MemoryAvailable | \n "]];
 Null

@@ -29,7 +29,7 @@ FeynCalcInternal[FAD[ar]];
                       ]
                                   ]}
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "FeynAmpDenominator | \n "]];
 Null

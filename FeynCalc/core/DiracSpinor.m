@@ -18,7 +18,7 @@ DiracSpinor=Spinor;
 
 DeclareNonCommutative[DiracSpinor];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracSpinor| \n "]];
 Null

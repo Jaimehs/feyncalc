@@ -24,7 +24,7 @@ RowBox[{"\[Integral]",
          StyleBox[ RowBox[{SuperscriptBox["\[DifferentialD]","D"], q}],
              ZeroWidthTimes -> True ]
             }
-            ], "(",Tbox[amp],")"
+            ], "(",FeynCalc`Tbox[amp],")"
        }
       ];
 
@@ -35,7 +35,7 @@ RowBox[{"\[Integral]",
          StyleBox[ RowBox[{SuperscriptBox["\[DifferentialD]","D"], q}],
              ZeroWidthTimes -> True ]
             }
-            ], "(",Tbox[amp],")"
+            ], "(",FeynCalc`Tbox[amp],")"
        }
       ];
 
@@ -48,7 +48,7 @@ StyleBox[
              ZeroWidthTimes -> True
                     ]
             }
-            ], "(",Tbox[amp],")"
+            ], "(",FeynCalc`Tbox[amp],")"
        }
       ];
 
@@ -60,14 +60,14 @@ RowBox[
 {"\[Integral]",
   RowBox[{
 StyleBox[
- RowBox[{SuperscriptBox["\[DifferentialD]","D"], Tbox[q1]}],
+ RowBox[{SuperscriptBox["\[DifferentialD]","D"], FeynCalc`Tbox[q1]}],
  ZeroWidthTimes->True
         ] ,
 "\[Integral]",
 RowBox[{SuperscriptBox["\[DifferentialD]","D"],
-            Tbox[q2]}]
+            FeynCalc`Tbox[q2]}]
          }
-        ], "(",Tbox[amp],")"
+        ], "(",FeynCalc`Tbox[amp],")"
      }];
 
 FeynAmp /:
@@ -77,14 +77,14 @@ FeynAmp /:
 RowBox[
 {"\[Integral]",
   RowBox[{
-RowBox[{SuperscriptBox["\[DifferentialD]","D"], Tbox[q1]}] ,
+RowBox[{SuperscriptBox["\[DifferentialD]","D"], FeynCalc`Tbox[q1]}] ,
 "\[Integral]",
 FractionBox[RowBox[{SuperscriptBox["\[DifferentialD]","D"],
-            Tbox[q2]}],
+            FeynCalc`Tbox[q2]}],
             SuperscriptBox[RowBox[{"(", "2", "\[Pi]",")"} ],"D"]
            ]
          }
-        ], "(",Tbox[amp],")"
+        ], "(",FeynCalc`Tbox[amp],")"
      }];
 
   MakeBoxes[ HighEnergyPhysics`FeynCalc`FeynAmp`FeynAmp[
@@ -95,23 +95,23 @@ RowBox[
 {"\[Integral]",
   RowBox[{
 FractionBox[
-RowBox[{SuperscriptBox["\[DifferentialD]","D"], Tbox[q1]}],
+RowBox[{SuperscriptBox["\[DifferentialD]","D"], FeynCalc`Tbox[q1]}],
         SuperscriptBox[RowBox[{"(", "2", "\[Pi]",")"} ],"D"]
            ]
          ,
 "\[Integral]",
 FractionBox[RowBox[{SuperscriptBox["\[DifferentialD]","D"],
-            Tbox[q2]}],
+            FeynCalc`Tbox[q2]}],
             SuperscriptBox[RowBox[{"(", "2", "\[Pi]",")"} ],"D"]
            ]
          ,
 "\[Integral]",
 FractionBox[RowBox[{SuperscriptBox["\[DifferentialD]","D"],
-            Tbox[q3]}],
+            FeynCalc`Tbox[q3]}],
             SuperscriptBox[RowBox[{"(", "2", "\[Pi]",")"} ],"D"]
            ]
          }
-        ], "(",Tbox[amp],")"
+        ], "(",FeynCalc`Tbox[amp],")"
      }];
 
   MakeBoxes[ HighEnergyPhysics`FeynCalc`FeynAmp`FeynAmp[
@@ -122,26 +122,26 @@ RowBox[
 {"\[Integral]",
   RowBox[{
 FractionBox[
-RowBox[{SuperscriptBox["\[DifferentialD]","D"], Tbox[q1]}],
+RowBox[{SuperscriptBox["\[DifferentialD]","D"], FeynCalc`Tbox[q1]}],
         SuperscriptBox[RowBox[{"(", "2", "\[Pi]",")"} ],"D"]
            ]
          ,
 "\[Integral]",
 FractionBox[RowBox[{SuperscriptBox["\[DifferentialD]","D"],
-            Tbox[q2]}],
+            FeynCalc`Tbox[q2]}],
             SuperscriptBox[RowBox[{"(", "2", "\[Pi]",")"} ],"D"]
            ]
          ,
 "\[Integral]",
 FractionBox[RowBox[{SuperscriptBox["\[DifferentialD]","D"],
-            Tbox[q3]}],
+            FeynCalc`Tbox[q3]}],
             SuperscriptBox[RowBox[{"(", "2", "\[Pi]",")"} ],"D"]
            ]
          }
-        ], "(",Tbox[amp],")"
+        ], "(",FeynCalc`Tbox[amp],")"
      }];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "FeynAmp | \n "]];
 Null

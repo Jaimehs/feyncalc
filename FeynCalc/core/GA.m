@@ -22,11 +22,11 @@ GA[x_, y__] := DOT @@ Map[GA,{x,y}];
 
 GA /:
   MakeBoxes[ GA[x_], TraditionalForm ] := If[$Covariant,
-                   SubscriptBox["\[Gamma]",MakeBoxes[x,TraditionalForm]],
+                   SubscripFeynCalc`Tbox["\[Gamma]",MakeBoxes[x,TraditionalForm]],
                    SuperscriptBox["\[Gamma]",MakeBoxes[x,TraditionalForm]]
                                             ];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "GA | \n "]];
 Null

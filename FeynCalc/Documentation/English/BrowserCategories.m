@@ -222,8 +222,8 @@ BrowserCategory["High Energy Physics",
         Item["MemSet", "FeynCalcRef.nb"],
         Item["OPE", "FeynCalcRef.nb"],
         Item["SubContext", "FeynCalcRef.nb"],
-        Item["Tbox", "FeynCalcRef.nb", IndexTag -> "TBox"],
-        Item["TBox", "FeynCalcRef.nb", IndexTag -> {"TBox", "Tbox"}]
+        Item["FeynCalc`Tbox", "FeynCalcRef.nb", IndexTag -> "FeynCalc`Tbox"],
+        Item["FeynCalc`Tbox", "FeynCalcRef.nb", IndexTag -> {"FeynCalc`Tbox", "FeynCalc`Tbox"}]
       }],
       BrowserCategory["Tools", None, {
         (* Functions *)

@@ -25,14 +25,14 @@ DeclareNonCommutative[DiracGammaT];
 DiracGammaT /: Transpose[DiracGammaT[a__]] := DiracGamma[a];
 
 DiracGammaT /: MakeBoxes[DiracGammaT[a_,___], TraditionalForm] :=
-               SubsuperscriptBox["\[Gamma]", Tbox[a], "T"] /; (Head[a] ===
+               SubSuperscriptBox["\[Gamma]", FeynCalc`Tbox[a], "T"] /; (Head[a] ===
                LorentzIndex) || (Head[a] === Integer);
 
 DiracGammaT /: MakeBoxes[DiracGammaT[a_,___], TraditionalForm] :=
-               SuperscriptBox[Tbox["(","\[Gamma]", "\[CenterDot]",
+               SuperscriptBox[FeynCalc`Tbox["(","\[Gamma]", "\[CenterDot]",
                                    a, ")"], "T"] /; Head[a] === Momentum;
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "DiracGammaT | \n "]];
 Null

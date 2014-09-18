@@ -23,22 +23,22 @@ GS[x_, y__] := DOT @@ Map[GS,{x,y}];
 
 GS/:
   MakeBoxes[ GS[a_/;FreeQ[a,Plus]],
-             TraditionalForm ] := Tbox["\[Gamma]", "\[CenterDot]", a];
+             TraditionalForm ] := FeynCalc`Tbox["\[Gamma]", "\[CenterDot]", a];
 GS/:
   MakeBoxes[ GS[a_/;!FreeQ[a,Plus]],
              TraditionalForm ] :=
-  Tbox["\[Gamma]", "\[CenterDot]", "(",a,")"];
+  FeynCalc`Tbox["\[Gamma]", "\[CenterDot]", "(",a,")"];
 
-gsg[a_]:=If[FreeQ[y, Plus], Tbox["\[Gamma]", a],
-                            Tbox["\[Gamma]", "(",a,")"]
+gsg[a_]:=If[FreeQ[y, Plus], FeynCalc`Tbox["\[Gamma]", a],
+                            FeynCalc`Tbox["\[Gamma]", "(",a,")"]
            ];
 
 GS/:
   MakeBoxes[ GS[a_, b__],
              TraditionalForm
-           ] := Tbox@@Map[gsg, {a,b}]
+           ] := FeynCalc`Tbox@@Map[gsg, {a,b}]
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "GS | \n "]];
 Null

@@ -126,7 +126,7 @@ PairContract/: DOT[A___, m_. f_[a__], B___,
                            , sCOt,Pair[x,y]
                          ] ] ]/;FreeQ[{x,y},LorentzIndex];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "PairContract | \n "]];
 Null

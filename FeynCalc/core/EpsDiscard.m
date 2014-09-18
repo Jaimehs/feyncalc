@@ -16,7 +16,7 @@ Levi-Civita tensors are replaced by 0 after contraction.";
 (* ------------------------------------------------------------------------ *)
 
 Begin["`Private`"];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "EpsDiscard | \n "]];
 Null

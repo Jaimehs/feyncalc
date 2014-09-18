@@ -14,7 +14,7 @@ determines the order n (Epsilon^n) which should be kept.";
 (* ------------------------------------------------------------------------ *)
 
 Begin["`Private`"];
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "EpsilonOrder | \n "]];
 Null

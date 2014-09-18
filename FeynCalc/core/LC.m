@@ -19,12 +19,12 @@ Begin["`Private`"];
 
    LC/:
    MakeBoxes[LC[x___][y___] ,TraditionalForm] :=
-   SuperscriptBox["\[Epsilon]", Tbox[x,y]];
+   SuperscriptBox["\[Epsilon]", FeynCalc`Tbox[x,y]];
    LC/:
    MakeBoxes[LC[x__] ,TraditionalForm] :=
-   SuperscriptBox["\[Epsilon]", Tbox[x]];
+   SuperscriptBox["\[Epsilon]", FeynCalc`Tbox[x]];
 
-End[]; EndPackage[];
-(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+End[];
+
 If[$VeryVerbose > 0,WriteString["stdout", "LC | \n "]];
 Null
