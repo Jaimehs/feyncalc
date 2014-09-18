@@ -1,0 +1,1 @@
+The Models directory has extra model files for FeynArts used from FeynCalc
